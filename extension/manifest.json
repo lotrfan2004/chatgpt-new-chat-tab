@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT — New Chat in a Tab",
+  "version": "1.0.0",
+  "description": "Restore Command-click, Ctrl-click, and middle-click on ChatGPT's New chat buttons.",
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_start"
+  }]
+}
